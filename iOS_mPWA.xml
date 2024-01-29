@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MPWA" parallel="false" thread-count="1">  <!-- name="iOS_mPWA" -->
+
+	
+	<!-- <parameter name="userType" value="${UserType}"/> Guest/NonSubscribedUser/SubscribedUser 
+		<parameter name="runMode" value="${runMode}"/> <parameter name="runModule" 
+		value="${runModule}"/> <parameter name="browserType" value="${browserType}"/> -->
+
+	<parameter name="browserType" value="Safari"/>
+	
+	<parameter name="InstallBuild" value="appstore"/>	<!--  testflight/appstore/no  -->
+	
+	
+
+	 <parameter name="url" value="https://hipi.co.in/"/> 
+	
+	
+	<parameter name="userType" value="NonSubscribedUser"/> <!-- Guest/NonSubscribedUser -->
+	
+	<parameter name="RequiredBuild" value="no"/>    <!--  Latest/no -->
+	
+	<parameter name="release" value="2"/>     <!-- 1/2/3/4/5 | Build  -->
+	
+	<parameter name="BuildVersion" value="Live"/>    <!--   1.023002800.0 | Live-->
+
+	<parameter name="runModule" value="Suite" />
+	<parameter name="runMode" value="Suites" />
+
+	<parameter name="NonsubscribedUserName" value="ios2@mailnesia.com"/>   <!-- ios5@mailnesia.com|ios1@mailnesia.com|ios2@mailnesia.com|ioshipi@mailnesia.com |"hipineo123@mailnesia.com" -->
+	<parameter name="NonsubscribedUserNameNumber" value="9008610296"/>
+	<parameter name="NonsubscribedPassword" value="123456"/>
+
+
+	
+	
+	<parameter name="FacebookUserName" value="mahesh.r@igsindia.net" />
+	<parameter name="FacebookPassword" value="123456@hipi" />
+
+	<parameter name="SubscribedUserName" value="" />
+	<parameter name="SubscribedPassword" value="" />
+
+	<parameter name="searchcontent1" value="Sanchari Hrudaya - Chambal" />	
+	
+	
+	<parameter name="FacebookUserID" value="igszeefive@gmail.com" />
+	<parameter name="FacebookUserPassword" value="zeefive@igs" />
+	
+	<parameter name="Validfacebookemail" value="krisarorec1047@gmail.com" />
+	<parameter name="Validfacebookpassword" value="Krishna19@" />
+
+  <parameter name="UserName" value="himanshi khurana" />
+    <parameter name="HashtageName" value="HimanshiKhurana" />
+ <parameter name="PhoneNumber" value="9533546451" />
+
+
+
+	<listeners>
+		<listener class-name="com.extent.ExtentReporter" />
+		<!-- <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/> -->
+		<!-- <listener class-name="com.utility.MyTranformer"/> -->
+	</listeners>
+
+	<test name="iOSHipiNeo"> <!-- 1049 total tcs|methods -->
+		<classes>      
+			
+			 <class name="com.zee5.iOS_HiPi_NeoScripts.IOS_HiPi_mPWA" />
+			
+		</classes>
+	</test>
+
+</suite>

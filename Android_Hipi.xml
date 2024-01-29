@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="HIPI" parallel="false" thread-count="1">  <!-- name="Android" -->
+
+
+	<!-- <parameter name="userType" value="${UserType}"/> Guest/NonSubscribedUser/SubscribedUser 
+		<parameter name="runMode" value="${runMode}"/> <parameter name="runModule" 
+		value="${runModule}"/> <parameter name="browserType" value="${browserType}"/> -->
+
+	<parameter name="userType" value="NonSubscribedUser" />  <!-- Guest/NonSubscribedUser-->
+
+	<parameter name="runModule" value="ZeeHipiSoundDetailPage" />  <!-- Suite -->
+
+	<parameter name="runMode" value="Suites" />
+
+	<parameter name="NonsubscribedUserName" value="zeenonsubhipi@gmail.com" />
+	<parameter name="NonsubscribedPassword" value="123456" />
+	
+<!--  <parameter name="NonsubscribedUserName" value="zeenonsubhipi@gmail.com" />
+	<parameter name="NonsubscribedPassword" value="123456" /> -->	
+
+	<parameter name="SubscribedUserName" value="" />
+	<parameter name="SubscribedPassword" value="" />
+
+	<parameter name="RegisteredEmail" value="zee5latest@gmail.com" />
+	<parameter name="RegisteredEmailPassword" value="User@123" />
+
+	<parameter name="searchcontent1" value="Sanchari Hrudaya - Chambal" />	
+	
+	<parameter name="keyword" value="Kundali Bhagya" />
+	<parameter name="music" value="Tere Siva" />
+	<parameter name="hashtag" value="#thejawaanisong" />
+	<parameter name="user" value="Prince Narula" />
+
+
+	<listeners>
+		<listener class-name="com.extent.ExtentReporter" />
+		<!-- <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/> -->
+		<!-- <listener class-name="com.utility.MyTranformer"/> -->
+	</listeners>
+
+	<test name="Android_Hipi">
+		<classes>
+			<class name="com.zee5.Android_HipiScripts.AndroidHipi" />
+		</classes>
+	</test>
+
+</suite>

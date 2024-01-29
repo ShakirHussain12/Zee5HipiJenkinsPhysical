@@ -1,0 +1,830 @@
+package com.zee5.Android_HipiScripts;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import com.utility.Utilities;
+
+
+
+public class AndroidHiPiNeoP2 {
+	private com.business.zee.Zee5ApplicasterHipiNeoBusinessLogic Zee5ApplicasterHipiNeoBusinessLogic;
+
+	@BeforeTest
+	public void AppLaunch() throws InterruptedException {
+		System.out.println("Launching Android App");
+		Utilities.relaunch = true; // Clear App Data on First Launch
+		Zee5ApplicasterHipiNeoBusinessLogic = new com.business.zee.Zee5ApplicasterHipiNeoBusinessLogic("zee");
+	}
+
+	@Test(priority = 0)
+	@Parameters({ "userType"})
+	public void ZeeAppInstallationLaunch(String userType) throws Exception {
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+
+	}				
+
+	//====================================***************Start P2 TCs****************=====================================================	
+
+
+//	@Test(priority = 1)
+	@Parameters({ "userType"})
+	public void FeedP2TCs(String userType) throws Exception {
+
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+
+		Zee5ApplicasterHipiNeoBusinessLogic.viewNumberOfLikes__T105(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.validateUIOfTheForYou__T013__T027(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.scrollVerticallyToInfiniteLevel__T014__T024(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkTheOptionsArePresentFeedSection__T007__T020(userType);//Covered In P1
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyDefaultTabOfFeedKeySection__T022(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.refreshTheListOnContents__T011__T023(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.listOfActionableItems__T028(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.tappingBackMobileOptionInListOfActionsScreen__T037(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.tappingOnDeviceBackButtonExitOpensPopup__T041__T101(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.tappingOnNoCTAClosesThePopup__T102__T042(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.tappingOnYesCTAClosesThePopup__T104__T044(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.ableToViewSoundOnPlayed__T050(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserProfilePage__T059(userType);
+		
+		Zee5ApplicasterHipiNeoBusinessLogic.ableToSeeProfilePictureOnTheVideoScreenOfFeed__T138__T072(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.navigateToUserProfilePageByTappingOnUserName__T074(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.userIsNotAbleToFollowAnyProfile__T077(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.userGetLoginPopUpByTappingOnLikeIconVideoOnPlayedPausedVideo__T079(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.userIsAbleToSeeTheCommentIconForYouScreen__T082(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.userIsAbleToSeeTheTotalCommentCountInFeedScreen__T084(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.userIsAbleToTapOnnShareIconInFeedScreenAndLoginPopUpIsDisplay__T087(userType);//Doubt
+		Zee5ApplicasterHipiNeoBusinessLogic.userIsAbleToLikeAVideoOnPlayedPausedVideo__T108(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.shoppableVideo__T175__T179(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.shoppableVideo__T176__T180(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.shoppableVideoFollowingSection__T177(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.nonShopableVideoValidation__T187__T223(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.productDataInsideSavedMomentTab__T215__T251(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.shopValidation__T184__T220(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.userWatchingShoppableVideos__T186__T222(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.userRedirectToShopPage__T190__T226(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.twoSectionsOfShopPageAre__T262__T271(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.productFromTheCurrentlyPlayingVideo__T273__T287(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.InThisVideoTabOnShopDetailsPage__T274__T288(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.iNTHISVideoTabUI__T275__T289(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.clickLESSiconOnINTHISVIDEO__T277__T290(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.clickOnExpandIconINTHISVIDEO__T278__T292(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.pageObjectDetails__T280__T295(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.ableSwipeDownPageToSeeTopProducts__T283__T297(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.eachProductImagesAreClickable__T305__T315(userType);//Hair Related
+		Zee5ApplicasterHipiNeoBusinessLogic.arrowPresentOnTheProductSiteShouldBeClickable__T306__T316(userType);//Hair Related
+		Zee5ApplicasterHipiNeoBusinessLogic.navigatedToRespectiveThirdPartySiteClickingOnImage__T312__T322(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.userShouldBeLandedOnINTHISVIDEOTab__T313__T323(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.navigatedToRespectiveThirdPartySiteClickingOnArrowButton__T311__T321(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.productByClickingTheSavedSmallCarouselImages__T325(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.miniPlayerByClckingCorouselSheet_T327__T338(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.closingMiniPlayerBehaviour__T330__T341(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.changeThePositionOfMiniPlayer_T331__T344(userType);//Fail
+		Zee5ApplicasterHipiNeoBusinessLogic.behaviorOfMiniPlayerWhenUserCloses__T334__T345(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.miniPlayerOnSaveMomentTab__T335__T346(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.afterClosingTheProductThirdPartySite__T336__T347(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.savedMomentTab__T349__T356(userType);//Guest fail Need to chaeck 
+		Zee5ApplicasterHipiNeoBusinessLogic.savedMomenttabUI__T350__T357(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.eXPANDButtonOnTheProductPanel__T351__T358(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.expandedProductsDetailsPage__T353__T360(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.switchBetweenTheOutfitAccessoriesBeautyHairTab__T354__T361(userType);//Changes 
+		Zee5ApplicasterHipiNeoBusinessLogic.seeRespectiveProduct__T355__T362(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.expandAllThePanelsAtATime__T352__T359(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.scrollDownScrollUp__T363__T374(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.productImagesAreClickable__T365__T376(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.arrowButtonsAreClickable__T366__T377(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.lessButtonOnTheProductDetailsPage__T368__T379(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.closingTheShopDetailsPage__T369__T380(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.thirdPartySiteNameBelowTheProductImages__T371__T382(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.productCardDetails__T370__T381(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.beautyBannerImage__T385__T388(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.beatyDetails__T386__T389(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.beautyBannerImageHair__T391__T395(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.beatyDetailsHair__T392__T394(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.clickingUponArowMarkT398_T400_T403_T405(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.closingInAppBrowser_T401_T406(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyThatShoppableVideoInsideDiscoverPage_T407_T408(userType,"Himanshi");
+		Zee5ApplicasterHipiNeoBusinessLogic.feedSHOPWifiConnectionToOFF__T411__T414(userType);//imp wifi related
+		Zee5ApplicasterHipiNeoBusinessLogic.tappingOutsSideThePopupScreenClosesThePopup__T043(userType);//Impdement
+		Zee5ApplicasterHipiNeoBusinessLogic.loginInToHiPiPopUpScreenByTappingOnUserThisSound__T099(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfShareScreen__T123(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.profilePictureIsDisplayedInTheComment__T154(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkProfilePictureOfAnotherViewer__T155(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.tagUserInCommentAndThenPostComment__T163(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyPerformverticalScrollCommentScreen_T497(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifySelectedSoundIsDisplayedInCreatorScreenAfterTappingOnUsethisSoundButtonInSoundDetailPage_T495(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfUserIsAbleToSeeTheUserNameInForYouTab_T490(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.tappingOnUserName__T486(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.ableToLikeDislikeAMultipleVideo__T462(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.userAbleToAddMultipleComments__T498(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.userIsAbleToLikeAVideoOnPlayedPausedVideo__T460(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.followingTabInFeedScreenAndLoginPopUp__T419(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.userAbleToViewFollowingScreen__T421(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.followingTabsAreDisplayedAtTopOfTheScreen__T422(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.optionsArePresentInBottomInFollowingScreen__T423(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyFollowingTabIsSelected__T425(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.likeAVideo__T458(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.redirectedToFeedScreen__T455(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.soundDetailPageByTappingOnMusic__T449(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.userIsAbleToViewSound__T448(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.profileDetailsScreen__T441(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.Verifyifuserisabletopausetheplayedbydefaultvideobytappingonit__T433(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.saveLooksButtonForNonShoppableVideos__T213__T249(userType);//Guest
+		Zee5ApplicasterHipiNeoBusinessLogic.tappingOnUserName__T489(userType);	
+		Zee5ApplicasterHipiNeoBusinessLogic.tappingOnUserName__T140(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.profilePictureIsDisplayedInTheComment__T154(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.profilePictureIsDisplayedInTheComment__T503(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.performAddToFavouritesActionByTapping__T466(userType);//Pass
+		Zee5ApplicasterHipiNeoBusinessLogic.UIOfTheFollowingTabInFeedScreen__T430(userType);//Pass
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyifuserisabletoaddURLandURLisvisibleasplaintext__T510(userType);//Pass
+		Zee5ApplicasterHipiNeoBusinessLogic.followTheUserByTappingPlusIcon__T113(userType);//Pass
+		Zee5ApplicasterHipiNeoBusinessLogic.commentsIsMatchedInBothForYouCommentsScreen__T160(userType);//Pass
+		Zee5ApplicasterHipiNeoBusinessLogic.countOfCommentsIsMatchedInBothHiPiHomeScreenCommentsScreen__T509(userType);//Pass
+		Zee5ApplicasterHipiNeoBusinessLogic.ableToSeeProfilePictureOnTheVideoScreenOfFeed__T487(userType);//Pass
+		Zee5ApplicasterHipiNeoBusinessLogic.performAddToFavouritesActionByTapping__T115(userType);//Pass
+		Zee5ApplicasterHipiNeoBusinessLogic.UnSaveAndSaveTheProductAgain__T212__T248(userType);//Pass
+		Zee5ApplicasterHipiNeoBusinessLogic.tabsOnShopDetailsPageInsideINTHIDVIDEOSection__T285__T299(userType);//Hair Related
+		Zee5ApplicasterHipiNeoBusinessLogic.switchBetweenTabsWithInINTHISVIDEOPage__T284__T298(userType);//Hair Related
+		Zee5ApplicasterHipiNeoBusinessLogic.miniPlayerBehaviour__T329__T340(userType);//Defec
+		Zee5ApplicasterHipiNeoBusinessLogic.followedThenFollowIcon__T114(userType);//Remove Plus Follow Icon
+		Zee5ApplicasterHipiNeoBusinessLogic.addingAHashtagAndThenPostComment__T164(userType);//List Of Hashtage Not displayed 
+		Zee5ApplicasterHipiNeoBusinessLogic.followedThenFollowIcon__T465(userType);//Remove Plus Follow Icon
+		Zee5ApplicasterHipiNeoBusinessLogic.addToFavouritesActionByTapping__T063(userType);
+		////================================Imp=========================================================			
+		//			
+		////			Zee5ApplicasterHipiNeoBusinessLogic.viewerCreatorDislike__T167(userType);//Imp
+		//////			Zee5ApplicasterHipiNeoBusinessLogic.likeDislikeMutipleComments__T169(userType);//Imp
+		////			Zee5ApplicasterHipiNeoBusinessLogic.likeDislikeMutipleComments__T518(userType);//Imp
+		////			Zee5ApplicasterHipiNeoBusinessLogic.viewerCreatorDislike__T516(userType);//Imp
+		////			Zee5ApplicasterHipiNeoBusinessLogic.viewNumberOfCommentsOnPlayedPausedVideo__T493(userType);//Imp
+		////			
+		////		
+		//			
+		//			
+		//			
+		//			
+		////			Zee5ApplicasterHipiNeoBusinessLogic.addingAHashtagAndThenPostComment__T513(userType);//List Of Hashtage Not displayed 
+
+	}
+
+
+
+
+
+
+
+
+	@Test(priority = 2)
+	@Parameters({ "userType"})
+	public void createrP2Tcs(String userType) throws Exception 
+	{	
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyVideoCreationScreenLayer__T526(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyVideoCreationScreenLayerlayer2__T527(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyVideoCreationScreenLayerlayer3_T528(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyAllowpermissionPromted__T531(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyDenyAllowPermisiionPopup__T533(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanCreateVideoWithoutPermisssion__T535(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanSaveVideoWithoutPermisssion__T536(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.selectVideo1x_Speed__T543(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.selectVideo2x_Speed__T544(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.selectVideoOnePointFivex_Speed__T545(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.selectVideoZeroPointThreex_Speed__T546(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.selectVideoZeroPointFiveX_Speed__T547(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanPauseVideo_T551(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyDefaultSpeedOfVideo_T553(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserCanSearchSongAndAddVideo_T557(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyVideoCreationTimeAndLapsedTime_T567(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanViewSingleClipSegment_T571(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanResumeVideoByTappingOnKeepInDiscardPopup_T573(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyLastRecordedClipisDeletedOrNotByTappingOnKeep_T574(userType);//ON Hold
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyLastRecordedClipisDeletedOrNotByTappingOnDiscard_T576(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyLastRecordedClipisDeletedOrNotByTappingOnKeep_T577(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyVideoCreationTimimings_T555(userType);              //Pending
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyLastRecordedClipisDeletedOrNotByTappingOnDiscard_T578(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanNavigatedToSelectVideoScreen_T583(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanUploadVideoFromGalleryAvailableInProfile_T585(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanRemoveAddedMusicInVideoCreationScreen_T593(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanRemoveAddedMusicAfterRecording_T595(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanRemoveAddedMusicAfterRecording_T596(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserNavigatedToSoundScreenAfterDenyPermission__T609(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyMusicscreenbackButton_T613(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyTrimIconOnVideoWithOriginalSound_T614(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyTrimIconOnVideoWithAddedSound_T615(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyTrimedsoundIsPlayed_T617(userType);//Pending
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyMicrophoneEnabledOnOriginalSOund_T620(userType);//on hold
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyMicrophoneEnabledOnaDDEDSOund_T621(userType);//on hold
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyFilterLayoutBeforeVideo_T627(userType);//
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserNavigatesToVideoCreationSCreenFromFilter_T633(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanUploadVideoWithUrl_T645(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyTextButtonInVideoEditScreen_T647(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyTextEditSCreen_T663(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserCanNavigateToSTickerScreen_T667(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyStickerVisibilityInVideoEditScreen_T668(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserRedirectedToVideoCreationScreenByTappingBackButton_T716(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyTrendingsInEffectScreen_T717(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserAbleToSeeRailsBelowSearchBar_T598(userType);//rail 
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanReplaceSoundBeforeRecording_T601(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanSaveDraftMultipleTimes_T720(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifySoundScreen_T602(userType);//ON Hold Fail 
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);	
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyFilterScreen_T565(userType);//Fail
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyMusicScreenLayout_T589(userType);//fail
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifySoundScreenLayout_T610(userType);//See all is miss Defect ID HIPI-2130
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanDowloadFilter_T629(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanPlayVideoWithFilter_T637(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserNavigateToTextEditSCreen_T648(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyVideoEditScreenLayout_T677(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifySavedAsDraftPopUp_T722(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifySystempromptedWithMessageWhileReplacingMusic_T594(userType);	
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyDefaultEffectScreen_T719(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanMentionMultiplePersonWhileUpload_T708(userType);//@related sug
+
+
+
+
+		////	Zee5ApplicasterHipiNeoBusinessLogic.verifyLastRecordedClipisDeletedOrNotByTappingOnKeep_T574(userType);covered
+		////	Zee5ApplicasterHipiNeoBusinessLogic.verifyLastRecordedClipisDeletedOrNotByTappingOnDiscard_T576(userType);Covered
+		//Need to check Manual team
+		//		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserCanAddTimerToVideo_T558(userType);
+		//		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserCanViewTimerOpions_T559(userType);
+		//		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanAddTimerOnMultipleClipSegment_T570(userType);
+		//		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanCreateVideoWithTimerOption_T560(userType);
+		//		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanAddFilterEffectsAndSoundToVideo_T562(userType);//Fail
+
+
+	}									
+
+
+
+
+
+	@Test(priority = 3)
+	@Parameters({ "userType"})
+	public void DiscoverP2Tcs(String userType) throws Exception 
+	{	
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+
+		Zee5ApplicasterHipiNeoBusinessLogic.DiscoverSearchFiled__T1332(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.DiscoverOptionDesign__T1336(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.DiscoverSearchPage__T1349(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.DiscoverOptionDesignForGuest__T1326(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.SearchFieldValidationAfterClickOnCancelButtonForGuest__T1351(userType, "Kundali");
+		Zee5ApplicasterHipiNeoBusinessLogic.SearchFieldValidationAfterClickOnCancelButtonForLoggedInUser__T1358(userType, "Kundali");
+		Zee5ApplicasterHipiNeoBusinessLogic.SearchResultScreenAfterEnteringThreeCharacter__T1359(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.ClickOnDifferentTabs__T1364(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyForUserShouldBeAbleToSeeAllCategoriesResultsInTheTopTab_T1366(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUsersTabOnTheSearchResultPage_T1367(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUsersTabOnTheSearchResultPage_T1371(userType);		
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyLogionPopUpAfterClickingOnFollowTabGuestuser__T1378(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyLogionPopUpAfterClickingOnFollowersTabGuestuser__T1387(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyLogionPopUpAfterClickingOnFollowingTabGuestuser__T1394(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyclickontheusersnameonUsersTabofthesearchresultpageanditsnavigation__T1401(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.PlayOrPauseValidationOnSoundTab__T1434(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyTheDurationListOfSondsDetailsLine__T1435(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifySongDetailsPage__T1436(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifySoundRailInTopTab__T1437(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifySoundCollectionPageAfterTappingSeeMore__T1438(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifySTappingOnThreeLinesDotedInSoundTab__T1445(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyCreatorPageOnTappingUseThisSound__T1466(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyLoginPopUPAfterTappingAddToWatchlist__T1470(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyLoginPopUPAfterTappingShare__T1471(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyLoginPopUPAfterTappingUseThisSound__T1472(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifySoundDetailsPageOnTappingThreeDotLine__T1476(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyHashTagTab__T1492(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyViewCountInHashTagTab__T1493(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyBannerAfterClickingBackButton__T1494(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.Verifyforfollowersbuttonclickonprofiledetailspage__T1555(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.Verifyforfollowingbuttonclickonprofiledetailspage__T1556(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.SwipeRailsToLeftAndRightLoggedInUser__T1579(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.Verifyifuserabletosearchanythinganddisplaystheresults__T1353(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.SearchFieldValidationAfterClickOnCancelButtonForLoggedIn__T1358(userType, "Kundali");
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyifuserabletosearchanythinganddisplaystheresultsLoggedINUser__T1360(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifySearchDataAppersAtTopLoggedInUser__T1361(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.userAbleToClickOnTheDisplayedResultsInTheSearchPage__T1362(userType, "Kundali");
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserISableToViewVideoInSoundDetailsPageGuest__T1482(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.Checkifusercantaponanyhashtagtrendingvideo__T1489(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifySearchFieldInFollowersTab__T1423(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyListOFFollowingTab__T1422(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyLogInPopupaafteraTappingFollowersTab__T1398(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyusersFollowing_FollowersPage__T1407(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserIsAbleToViewFullPlayerOfTheVideosByTappingOnAnyVideoInSoundDetailPageLoggedINUser__T1463(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserIsAbleToViewRelatedVideosForANewOrExistingSoundGuest__T1477(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.Verifyfollowbuttonanditsclickontheuserprofilepage__T1403(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyClickOnTheVideoBannerLoggedInUser__T1528(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.Verifyvideotabofsearchresultpage__T1430(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.BackButtonNavigateToPreviousPage__T1427(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoggedInUserVerifyuserprofilepage__T1402(userType);//Hold Video
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyScrollDownInSoundTab__T1439(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyScrollUpInSoundTab__T1440(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifySongDetailsPageForLoggedinUser__T1444(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyContentAddedToFavourite__T1447(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserISableToViewVideoInSoundDetailsPage__T1462(userType);//Hold Video
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserNavigatedToSoundDetailsPageTappingBackButton__T1468(userType);//Hold Video
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserprofileonrail__T1580(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserNavigatedSameProfileLoggedInUser__T1582(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserNavigatedProfileScreenAfterTappingArrowIconLoggedInUser__T1584(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyFollowingListingScreen__T1405(userType,"Kundali");//fail
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserISAbleToClickOnFollowingUserProfileLoggedINUser__T1614(userType);//Defect
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyFollowersListUserProfile__T1613(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyFollowersSearchFieldUserProfile__T1612(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.Verifyfollowinglistuserclickandnavigation__T1610(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyforUsercansearchanyfollowersuserfromthelist__T1608(userType,"Sheak pareth ");
+		Zee5ApplicasterHipiNeoBusinessLogic.Verifyforclickonsearchfield__T1606(userType,"Sheak pareth ");	
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyforUsercansearchanyfollowinguserfromthelist__T1604(userType,"Sheak pareth ");//Doute How to check
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyforclickonsearchfieldFollowers__T1600(userType,"Sheak pareth ");
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyforclickonsearchfieldFollowing__T1599(userType);			
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyFollowersListThroughUserTab__T1424(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyForVideoClicksOnTheBannersDetailsPageLoggedInUser__T1531(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.Verifyforfollowingtabofuserlistpage__T1409(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyforsharebuttonclick__T1536__T1576(userType);//Fail
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserNavigatedToSoundDetailsPageTappingonDeviceBackButton__T1469(userType);//Hold Video is not displayed defect 
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyBannerDetailsPage__T1529(userType);//Fail
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyFollowingtabanditsclickontheuserprofilepage__T1554(userType);//Pass
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyforuserprofilelistPagecontentLoggedInUser__T1585(userType);//fail
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserNavigatedSameProfileAfterTappingProfileImage__T1587(userType);//fail
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserNavigatedPreviousScreenAfterTappingArrowIconLoggedInUser__T1588(userType);//fail
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyFollowerstabanditsclickontheuserprofilepage__T1405(userType);//Pass
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyBannerDetailPageForLoggedInUser__T1530(userType);//fail
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyPreviousPageFromBannerDetailsPage__T1532(userType);//fail
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyForAddFavoriteButtonFunctionality__T1534(userType);//fail
+		Zee5ApplicasterHipiNeoBusinessLogic.Verifyforclickondisplayedusernamefromthesearchresultandnavigation__T1603(userType,"Guest User");//fail
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUI_UXusersFollowing_FollowersPage__T1596(userType);//fail  doubt List of Following 
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyProfileAfterTappingOnUserInFollowingTab__T1421(userType);//fails action not performable Defect //fail
+		Zee5ApplicasterHipiNeoBusinessLogic.Verifyfollowerslistuserclickandnavigation__T1425(userType);//Fail
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyNavigatedToSameUserProfile__T1373(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserISAbleToClickOnFollowingUserProfile__T1393(userType);//Doubt Following Not displayed
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyFieldsOnUserTab__T1400(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifySoundTitleInSoundDetailsPage__T1475(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserNavigatedToSoundDetailsPageTappingBackButtonGuestUser__T1468(userType);//Doubt
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserNavigatedToSoundDetailsPageTappingonDeviceBackButtonGuestUser__T1469(userType);//Doubt
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserNavigatedToSoundDetailsPageTappingBackButtonGuestUser__T1486(userType);//Doubt	
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserNavigatedToSoundDetailsPageTappingonDeviceBackButtonGuestUser__T1487(userType);//Doubt
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUIOFHashTagDetailsPage__T1517(userType);	
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyBannerDetailPage__T1518(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyLoginPopupAfterClickingAddToWatchList__T1521(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyLoginPopupAfterClickingShare__T1524(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUIRailOfContent__T1539(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserAbleToTabOnProfileIconInBollywoodRail__T1542(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserNavigatedSameProfile__T1543(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserNavigatedProfileScreenAfterTappingArrowIcon__T1545(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyforuserprofilelistPagecontent__T1546(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserNavigatedPreviousScreenAfterTappingArrowIcon__T1549(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.Verifyforprofiledetailspage__T1550(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.Verifyforfollowbuttonclickonprofiledetailspage__T1553(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifySearchDataAppersAtTop__T1354(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyTheShowDetailsPage__T1441(userType);//Hold Video not display
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyifUIUXareasperthedesigns__T1618(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.discoveButton__T1327__T1337(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyforShareuttonclickonprofiledetailspage__T1576(userType);//Login Popup not display 
+
+
+
+
+
+		////		Zee5ApplicasterHipiNeoBusinessLogic.VerifyFollowingList__T1381(userType);//Invalide Steps
+		////		Zee5ApplicasterHipiNeoBusinessLogic.VerifySEarchFieldInListOfFollowing__T1382(userType);//Invalide Steps	
+		////		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserAbleToEnterDataInFollowingTab__T1383(userType);//Invalide Steps
+
+	}
+
+
+	@Test(priority = 4)
+	@Parameters({ "userType"})
+	public void profileP2TCs(String userType) throws Exception
+	{
+		
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkWhetherHashtagIsRemovedFromFavoriteOrNot_T1170(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfUserIsAbleToUploadImageByCapturingImageFromCamera_T1076(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfUserIsAbleToUpdateNameByEnteringLessCharacter_T1081(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfADeafualtUserNameIsDisplayed_T1082(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkWhileEditingUserHandleAnErrorIsDisplayedIfTheUserHandleAlreadyExist_T1083(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkOnEditingUserHandleNoErrorIsDisplayedIfTheUserHandleAddedDoesNotExist_T1084(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfOnEditingUserHandleWithLessThan20CharacterNoErrorMessageShouldGetDisplayed_T1086(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfUseCanEnterLessThanOrEqualTo200CharactersInUserBioField_T1090(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfUserNameAreMandatoryFieldsWhileEditingAProfileThatIsFieldsCannotBeBlank_T1092(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfNameAreMandatoryFieldsWhileEditingAProfileThatIsFieldsCannotBeBlank_T1093(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkLayoutOfFollowersListScreen_T1095(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfUserIsAbleToSearchAndVerifyTheOptionsDisplayedOnEnteringTextInSearchTextField_T1097(userType,"Puja puja");
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfOnTappingCrossIconInSearchTextFieldEnteredTextIsRemovedAndUserIsRedirectedBackToFollowersListScreen_T1099(userType,"Puja puja");
+		Zee5ApplicasterHipiNeoBusinessLogic.checkLayoutOfFollowingListScreen_T1104(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfOnTappingCrossIconInSearchTextFieldEnteredTextIsRemovedAndUserIsRedirectedBackToFollowingListScreen_T1108(userType,"Katrina  kaif");
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfOnTappingAnyUserFromFollowingListUserIsRedirectedToSelectedUserProfileDetailScreen_T1109(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserIsABleToSeeNotificationBellIcon_T1145(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserIsABleToTapOnNotificationBellIcon_T1146(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkTheUIOfNotificationScreen_T1147(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfUserIsAbleToTapOnLikesInAllActivityDropDown_T1148(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfUserIsAbleToTapOnFollowersInAllActivityDropDown_T1151(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfUserIsNavigatedToVideoPlayModeScreenAndVideoScreenIsNotScrollable_T1158(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserNavigatedToProfileScreenByTappingBackButton_T1161(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserIsAbleToTapOnBookmarkIcon_T1165(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserIsAbleToNavigateFromOneTabToAnotherTab_T1167(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserIsAbleToRemoveVideoByTappingOnAddedToFavorites_T1168(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserIsAbleToRemoveHashtagFromFavorites_T1169(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyuserisabletoclickonallowctaAllowZee5HiPiaccessyourAllFriends__T1208(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.Verifythehashtagisremovedfromprofilefavourites__T1173(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyifDraftvideosofloggedinuserarenotvisibleforNormalUser__T1133(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkWhetherSoundIsRemovedFromFavoriteOrNot_T1172(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserIsAbleToSeeAllHisPrivateVideo_T1184(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkWhetherPopupGetsDisappearByTappingDeviceBackButton_T1192(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserCanLikePrivateVideoOrNot_T1193(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfUserCanCommentOnPrivateVideo_T1194(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserCanLikeHisOwnCommentOrNotInPrivateVideo_T1195(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkWhetherCommentScreenGetClosedByTappingCrossButtonInPrivateVideo_T1196(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserIsAbleToSeeShareButtonInPrivateVideoOrNot_T1197(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkByTappingDeviceBackShareOptionShouldGetDisappear_T1200(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserIsAbleToClickOnAllowCtaOnAllowZee5HipiTakePictureAndRecordVideo_T1207(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserIsAbleToClickOnAllowCtaOnAllowZee5HipiAccessYourContact_T1208(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserIsAbleToClickOnDenyCtaOnAllowZee5HipiTakePictureAndRecordVideo_T1210(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserIsAbleToClickOnDenyCtaAllowZee5HipiAccessYourContact_T1211(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkWhetherPermissionPopupGetsDisplayedOrNot_T1213(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfUserIsAbleToClickOnCTAOnAllowAllRequiredPermissionPopup_T1220(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkWhetherPermissionPopupGetsDisplayedOrNot_T1221(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkWhetherPermissionPopupGetsDisplayedOrNot_T1222(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserIsAbleToClickOnAllowCtaAllowZee5HipiAccessYourContact_T1223(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyuserisabletoclickonallowctaAllowZee5HiPiaccessyourcontact__T1223(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkWhetherPermissionPopupGetsDisplayedOrNot_T1224(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserIsAbleToClickOnDenyCtaOnAllowZee5HipiTakePictureAndRecordVideo_T1225(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType); 
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserIsAbleToClickOnDenyCtaOnAllowZee5HipiAccessYourContact_T1226(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType); 
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserIsAbleToRemoveVideoFromDraftListOfLoggedInUserForUpload_T1116(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserIsAbleToDeleteASingleVideoSavedInDraft_T1114(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfUserIsRedirectedToAccountDetailScreenWhenTappedOnBack_T1117(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfUserIsAbleToViewAllHisDraftVideo_T1130(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfOnTappingVideoWillNavigateTheUserToVideoUploadingScreen_T1131(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfDraftedVideoIsDeletedWhenUserTapsOnYesOnTheDeletePopup_T1135(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfDraftedVideoIsNotDeletedWhenHeTapOnNo_T1136(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkTheVideoSavedAsDraftIsDisplayedInProfileOrAccountDetailScreen_T1137(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyDraftedVideoIsNotDeletedWhenUserTapOnNoButton__T1144(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserIsAbleToSeeTheLikeCountsInProfileScreen_T1163(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserIsAbleToSeeBookMarkIconOnProfile_T1164(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkThatIfMultiplePeopleLikeTheVideoThenThumbnailOfTheProfilePictureOfTheLatestTwoUserShouldDisplayed_T1153(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkWhetherHashtagIsRemovedFromFavoriteOrNot_T1174(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfTappingBackButtonUserWillNavigateToVideosListing_T1179(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfThereIsAnOptionToDeleteAnPublishedVideos_T1181(userType);
+
+
+
+
+	}
+
+/*
+
+	//==================================Login(P2TCS)================================================
+	@Test(priority = 5)
+	@Parameters({ "userType"})
+	public void LoginP2TCs(String userType) throws Exception {
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+
+
+		Zee5ApplicasterHipiNeoBusinessLogic.checkTheUIOfTheLoginInScreenForPhoneTab_T803(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checktheUIOfTheLoginInToHiPiPopUp_T800(userType);		
+		Zee5ApplicasterHipiNeoBusinessLogic.checktheUIoftheForgotPasswordResetScreenForPhoneNnumber_T819(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkifUserisAbletoRemovetheEnteredPhoneNumber_T830(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checktheUIoftheLoginWithOTPScreen_T835(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checktheUIofVericationScreen_T837(userType);	
+		Zee5ApplicasterHipiNeoBusinessLogic.checktheifUserisAabletoSeetheResendcodeAalongWithtimeinVerificationScreen_T840(userType);//Defect
+		Zee5ApplicasterHipiNeoBusinessLogic.checktheUIoftheLogininScreenforEmailtab_T846(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checktheifUuserisAabletoSeetheToastMessage__T848(userType);//Getting Fail ToastMessage 
+		Zee5ApplicasterHipiNeoBusinessLogic.checkifUserisAbletoRemovetheEnteredEmailAddressbyTappingonCrossIconinLoginScreen__T850(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkifUserisAbletoRemoveTheEnteredPasswordByTappingOnCrossIconInLoginScreen__T852(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checktheUIofTheForgotPasswordResetScreenforEmail__T855(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkuserisabletoRemovetheEnteredEmailAddressbyTappingonCrossIcon__T857(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkuserisabletoRemovetheEnteredEmailAddressbyTappingonCrossIcon__T882(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checktheUIoftheSignUpScreenForPhoneNumber__T885(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkifUserisAbleToNavigateToSignupScreenAfterTappingonUsePhoneorEmailCTA__T931(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkifuserisabletoseetheSelectCountryRegion_T896(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkifuserisabletoseetheCloseCountryRegion_T897(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkifuserisabletoseetheCloseCountryRegion_T898(userType);			
+		Zee5ApplicasterHipiNeoBusinessLogic.checkifUserisNavigatetoSignUpwithPhoneNumberScreen__T901(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkifuserisabletoEnterthePhoneNumberinPhoneNumberField__T902(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfUserIsAbleToRemoveTheEnteredPhoneNumber__T903(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checktheUIofVerificationScreen__T909(userType);//Defect 
+		Zee5ApplicasterHipiNeoBusinessLogic.checktheInvalidCodeMessageIsDisplayedWhenUserTappingOnVerifyOTPCTAWithoutEnteringOTP__T910(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkCheckifuserisAbletoSeetheOTPSentSuccessfullyMessage__T914(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkifuserisabletoseetheResendCodeAlongWithTimeinVerificationScreee__T915(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checktheUIofTheForgotPasswordResetScreenForPhoneNumber__T919(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkifUserNavigatetoVerificationScreen__T924(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checktheUIofVerificationScreenforOTP__T925(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checktheInvalidCodeMessageIsDisplayedWhenUserTappingOnVerifyOTP__T926(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkifUserisAbletoEenterthenewPhoneNumberinPhoneNumberField__T949(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkifUserisNavigativetoVerificationScreenByTappingOnSendOTPCTA__T952(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checktheUIofVerificationScreenforOTP__T953(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkifUserisAbletoRequestMultipleOTPs__T955(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checktheEitherOTPisNotValidorHasExpiredMessageIsDisplayedd__T957(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checktheUIofTheSignupScreenforEmail__T983(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkthePleaseuseValidEmailAddressMessageIsDisplayedWhenUserEnterInvalidEmail__T985(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkifUserisAbletoRemovetheEnteredEmailAddress__T987(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checkifUsernavigatetoSignupScreenByTappingonNextCTA__T989(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.selectCountryRegionScreen__T809(userType, "India");
+		Zee5ApplicasterHipiNeoBusinessLogic.searchBarbyTappingOnCrossIcon__T809(userType, "India");
+		Zee5ApplicasterHipiNeoBusinessLogic.countryRegionScreen__T946(userType, "India");
+		Zee5ApplicasterHipiNeoBusinessLogic.tappingOnCrossIconInSelectCountry__T947(userType,  "India");
+		Zee5ApplicasterHipiNeoBusinessLogic.CreateUserNamePageUI__T999(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.changeTheUsername__T1001(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.googleLoginPopWithListOfGoogleAccount__T876(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.multipleOTPs__T842(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.checktheUIoftheSignUpScreen__T990(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.mobileNumberAndPassowrdCombination__T826(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.eitherOTPIsNotValidHasExpiredMessage__T839(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.sentSuccessfullyMessageIsDisplayedByTappingOnSendAgain__T843(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.emailAddressAndPassowrdCombinationWasWongDuring__T859(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.userEnterInvalidPassword__T860(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.UIOfTheListOfGoogleAccount__T879(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.alreadyHaveAnAccountWithThisNumbner__T905(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.tappingOnVerifyOTPWhenUserEnteredInvalidOTP__T911(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.UIOftheResetScreen__T923(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.eitherOTPIsNotValidHasExpired__T927(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.ageShouldBeAbove18YearMessage__T940(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.UIOfTheListOfGoogleAccount__T1035(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.signUpScreenForEmail__T932(userType);
+
+	}
+
+
+
+
+
+
+
+	@Test(priority = 6)
+	@Parameters({ "userType"})
+	public void SettingsAndprivacyP2TCs(String userType) throws Exception {
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserAbleToShareVideoOverSocialMedia_T772(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUiOfHelpCenterScreen_T778(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyHiperLinksOfHelpCentre_T780(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyNavigationOfTermsOfUse_T787(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserIsNavigatedToSettingsScreenByTappingBackButton_T790(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserLandsOnChangePasswordScreen_T745(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUsercanCreatePasswordWithLessThanSixCharacter_T747(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUsercanCreatePasswordWithLettersNumbersAndSpecialCharacters_T752(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUsercanCreatePasswordWithLettersAndNumbers_T753(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUsercanCreatePasswordWithLettersAndSpecialCharacters_T754(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUsercanCreatePasswordWithNumbersAndSpecialCharacters_T755(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyApprovedUsersCanFolowPrivateProfile_T757(userType,"@igstesting003");
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyApprovedUsersCanViewVideosOfPrivateProfile_T758(userType,"@igstesting003");	
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyApprovedUsersCanLikeVideosOfPrivateProfile_T759(userType,"@igstesting003");
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyPrivateAccountDoesnotRestrictFollowViewAndLike_T760(userType,"@igstesting003");
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyAnyUserCanFollowThePublicProfile_T761(userType,"@igstesting003");
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyAnyUserCanViewVideosOfPublicProfile_T762(userType,"@igstesting003");
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyAnyUserCanLikeVideosOfPublicProfile_T763(userType,"@igstesting003");
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserAbleToDownloadVideoWhileDownloadVideosSetToOn_T764(userType,"@igstesting003");
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserAbleToLikeVideoWhenLikingVideoIsSetToEveryOne_T766(userType,"@igstesting003");
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserAbleToShareVideoWhenDuetVideoIsSetToEveryOne_T768(userType,"@igstesting003");
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserAbleToShareVideoWhenDuetVideoIsSetToEveryOne_T770(userType,"@igstesting003");
+
+
+		//				Zee5ApplicasterHipiNeoBusinessLogic.appLanguageIsSetToEnglish__T777(userType);//need to check 
+
+
+	}
+
+
+
+
+
+	@Test(priority = 7)
+	@Parameters({ "userType"})
+	public void newDiscoverP2TCs(String userType) throws Exception 
+	{
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+
+		Zee5ApplicasterHipiNeoBusinessLogic.CheckIfUserIsAbleToViewCommentBoxInHashtagBannerVideos_T1842(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.CheckIfUserIsAleToViewCommentBox_T1843(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.CheckUIOfTheVideoPlayerScreenByTappingAnyVideoOnDiscoverPage_T1937(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.CheckTheUIOfTheVideoPlayerScreen_T1942(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyHeightOfCommentBoxIsSameAsNavigationalbarOfDiscoverScreenVideo_T1840(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyHeightOfCommentBoxIsSameAsNavigationalbar_T1841(userType);
+		//Login
+		Zee5ApplicasterHipiNeoBusinessLogic.CheckForTheUIOfOTPScreen_T1779(userType);
+
+	}
+
+	@Test(priority = 8)
+	@Parameters({ "userType"})
+	public void newProfileP2TCs(String userType) throws Exception 
+	{
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+
+		Zee5ApplicasterHipiNeoBusinessLogic.CheckTheUIOfInviteFriendsScreen_T1744(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.ChecKIfUserIsAbleTOSeeCommentBoxOnTheVideoScreenPlayingOrPausedInProfileDetailScreen_T1848_T1858(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.ChecKIfUserIsAbleTOSeeCommentBoxOnTheVideoScreenPlayingOrPausedInProfileScreen_T1861(userType);
+
+
+	}
+
+
+	@Test(priority = 10)
+	@Parameters({ "userType"})	
+	public void CreatorNewP2TCs(String userType) throws Exception 
+	{
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUiOfEditClipScreen_T1655(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUiOfSelectMediaScreen_T1658(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUiOfEditClipScreenWhilePhotoAdded_T1664(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyDefaultDurationOfUploadedPhotoIsByDefaultTwoSeconds_T1665(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyByClickingOnTickIconInDurationScreenUserNavigatesToEditClipScreen_T1667(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUiOfEditClipScreenAfterAddingVideo_T1678(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUsernavigatesBackToEditClipScreenWhenUserTapsOnTickIcon_T1682(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserAbleToNavigateToEditScreenWhenBackButtonInEditClipScreenIsTapped_T1683(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyEffectPopupIsDisappearedWhenDeviceBackButtonIsTapped_T1795(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyFilterPopupIsDisappearedWhenDeviceBackButtonIsTapped_T1803(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUiOfFilterScreen_T1804(userType);//Fail 
+	}
+	@Test(priority = 11)
+	@Parameters({ "userType"})	
+	public void PostNewP2TCs(String userType) throws Exception 
+	{
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyAfterTappingOnPostUploadfailedHasDisplayed_T1649(userType);//Fail
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyByTappingOnDismissUploadPopupDisappear_T1651(userType);//Fail
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyByTappingOnRetryUserReinitiateTheUploadProcess_T1650(userType);//Fail
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUiOfTrimVideoScreen_T1951(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyByTappingOnKeepCtaInDiscardPopupUserNavigatesToEditVideoScreen_T1957(userType);	
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserTrimDraftedVideo_T1952(userType);
+		System.out.println("--------------Detail screen p2 Tc's---------------");
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanSeeProgressiveBar_T1884_T1885(userType);
+
+	}
+
+
+	@Test(priority = 12)
+	@Parameters({ "userType"})
+	public void newFeedP2TCs(String userType) throws Exception 
+	{
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+
+		Zee5ApplicasterHipiNeoBusinessLogic.CheckTheUIOfFeedScreenForAShoppableVideo_T1934(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyFollowedUserCanSeeFollowingCtaInCreatorScreen_T1930(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.shoppableVideoPlayerScreenByTapping__T1944(userType);
+		Zee5ApplicasterHipiNeoBusinessLogic.UIOfTheVideoPlayerScreen__T1946(userType);
+		//=========================Effect Detail=====================================
+		Zee5ApplicasterHipiNeoBusinessLogic.commentBoxEffectDetailScreen__T1849__T1859(userType);
+		//===========================Filter Detail==================================
+		Zee5ApplicasterHipiNeoBusinessLogic.commentBoxFilterDetailScreen__T1850__T1860(userType);
+		//==========================Sound detail===========================================
+		Zee5ApplicasterHipiNeoBusinessLogic.CheckUserIsAbleTOSeeCommentBoxInSoundDetailScreen_T1846_T1856(userType);
+		//===================================Profile===================================
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUIOfVideoPlayerScreenByTappingLongPressOnIt_T2339(userType); //P2
+
+
+
+	}
+	//=======================================Added Reports=========================================================
+
+	@Test(priority = 11)				
+	@Parameters({ "userType"})
+	public void HashTagRelatedTcs(String userType) throws Exception 
+	{	
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyHahTagIsVisibleInFeedScreen_T045_T089(userType);//Feed p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserNavigatedToFeedScreenByTappingDeviceBackInHashTagScreen_T049_T093(userType);//Feed p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyLoginPopupIsDiplayedOnTappingCreateVideoInHastagDetailScreen_T090(userType);//Feed p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanTapOnHashTagInForYouTab_T094(userType);//Feed p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanViwFullAndShortDescriptionInFeedScreen_T436(userType);//Feed p2
+		Zee5ApplicasterHipiNeoBusinessLogic.CheckUiOfHashTagSCreen_T1495(userType);//discover p2
+		Zee5ApplicasterHipiNeoBusinessLogic.CheckUserCanCreateVideoWithHashTag_T1498(userType);//discover p2
+		Zee5ApplicasterHipiNeoBusinessLogic.ChecckwidgetFromHashTagScreen_T1501(userType);//discover p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserNavigatesToHashTagScreenBytappingBackOnWidgetScreen_T1502(userType);//discover p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyNoOfViewInHashTagScreenIsDisplayed_T1509(userType);//discover p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUseCanSeeVideoWithOriginalSound_T056(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUseCanSeeVideoWithExistingSound_T057(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanViwFullAndShortDescriptionInFeedScreen_T436(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanRemoveSearchedText_T810(userType,"India");//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanSeeCommentBox_T1847_T1857(userType);//T1847 p2 T1857 p2
+
+	}
+
+	@Test(priority = 12)			
+	@Parameters({ "userType"})
+	public void MissTcs(String userType) throws Throwable 
+	{
+		System.out.println("-------------------Missed Tc's--------------------------");
+
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserFollowedIsDisplayedInFollowingScreenInProfile_T1101(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyFollowedUserIsListedInFollowingScreenInProfileBySearching_T1106(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyusernavigatesToDraftListingPageOnTappingBack_T1132(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUiOfFavoriteScreen_T1166(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanRemoveSoundFromFavoritesScreen_T1171(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanSeeUplaodingProgressTextWhileUploadingVideo_T1180(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanDeletePublishedVideos_T1182(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.checkWhetherPopupGetsDisappearByTappingDeviceBackButton_T1191(userType);//p2
+		//-----------------------Discover---------------------------
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUiOfFriendScreen_T1205(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyusersFollowing_FollowersListPage_T1406(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserCanSearchFollowingInFollowersListPage_T1408(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserCanSeeSearchFieldInFollowingTab_T1410(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyRelatedSearchedResultIsDisplayedUnderFollowingTabOfSearchedUser_T1412(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserCanNavigateToProfileFromUserListingPage_T1414(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.VerifyUserCanSeeSearchFieldInFollowersTab_T1416(userType);//p2
+
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyBannerIsVisibleAndClickable_T1527(userType);//p2
+
+		Zee5ApplicasterHipiNeoBusinessLogic.checkIfUserIsAbleToUploadImageByCapturingImageFromGallery(userType);
+
+		//Dont Run need to check Manual team 
+		//Zee5ApplicasterHipiNeoBusinessLogic.verifySharingBannerOnMultipleMedium_T1523(userType);//p2
+	}
+
+	@Test(priority = 14)			
+	@Parameters({ "userType"})
+	public void NewTcs(String userType) throws Throwable 
+	{
+		Zee5ApplicasterHipiNeoBusinessLogic.relaunch(true);
+		Zee5ApplicasterHipiNeoBusinessLogic.LoginAndNivigateToHipi(userType);
+
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUiOfChangePasswordScreen_T2376(userType); //p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyMinimumCharactersToastMessage_T2377(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyMinimumCharactersToastMessage_T2378(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanClearDataByTappingOnX_T2379(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanClearDataByTappingOnXInPasswordField_T2380(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.verifyUserCanChangePasswordWithInvalidPassword_T2381(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserCanNavigateToSettingsAndPrivacyScreenByTappingAppBack_T2385(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.checkUserCanNavigateToSettingsAndPrivacyScreenByTappingDeviceBack_T2386(userType);//p2
+		Zee5ApplicasterHipiNeoBusinessLogic.shopPageBySwipeTheDownTheBottomUpSheet__T2390__T2397(userType);//T2390-P2  T2397 P2
+		Zee5ApplicasterHipiNeoBusinessLogic.behaviorOfMiniPlayerWhenUserCloses__T2404__T2411(userType);//T2404-P2 T2411 P2
+		Zee5ApplicasterHipiNeoBusinessLogic.behaviorOfMiniPlayerWhenUserClosesTheShopPage__T2418__T2425(userType);//T2418-P2 T2425-P2
+
+		//Filter Related shop button 
+		//				Zee5ApplicasterHipiNeoBusinessLogic.miniPlayerWhenUserClosesTheShopPageBySwipeTheDownEffect__T2432__T2439(userType);//T2432 p2 T2439 p2
+		//				Zee5ApplicasterHipiNeoBusinessLogic.closesTheShopPageBySwipeDownBottomUpSheet__T2446__T2453(userType);//T2446-p2 T2453-p2
+
+	}
+*/
+
+	@AfterTest						
+	public void tearDownApp() {		
+		System.out.println("Quit the App");
+		Zee5ApplicasterHipiNeoBusinessLogic.tearDown();	
+	}			
+
+
+
+}

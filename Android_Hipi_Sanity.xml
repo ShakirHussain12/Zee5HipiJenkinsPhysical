@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="HIPI" parallel="false" thread-count="1">  <!-- name="Android" -->
+
+
+	<!-- <parameter name="userType" value="${UserType}"/> Guest/NonSubscribedUser/SubscribedUser 
+		<parameter name="runMode" value="${runMode}"/> <parameter name="runModule" 
+		value="${runModule}"/> <parameter name="browserType" value="${browserType}"/> -->
+
+	<parameter name="userType" value="NonSubscribedUser" />  <!-- Guest/NonSubscribedUser-->
+
+	<parameter name="runModule" value="saveasdraft" />
+	<parameter name="runMode" value="Suites" />
+
+	<parameter name="NonsubscribedUserName" value="zeenonsubhipi@gmail.com" />
+	<parameter name="NonsubscribedPassword" value="123456" />
+
+	<parameter name="SubscribedUserName" value="" />
+	<parameter name="SubscribedPassword" value="" />
+
+	<parameter name="searchcontent1" value="Sanchari Hrudaya - Chambal" />	
+	
+	<parameter name="MetadataSearchKeyword" value="Bura na manoo Holi Hai" />
+	<parameter name="HashtagSearchKeyword" value="#Transition" />
+	<parameter name="ProfileSearchKeyword" value="Mahira Sharma" />
+	<parameter name="SoundSearchKeyword" value="twist kamariya" />
+	<parameter name="keyword" value="Kundali Bhagya" />
+	<parameter name="music" value="Tere Siva" />
+	<parameter name="hashtag" value="#thejawaanisong" />
+	<parameter name="user" value="Prince Narula" />
+	<parameter name="NewNonsubscribedUserName" value="zeehipinewuser@gmail.com" />
+	<parameter name="NewNonsubscribedPassword" value="zee123" />
+
+
+	
+	<parameter name="NewNonsubscribedUserNameDontUse" value="newuserdontuse@gmail.com" />
+	<parameter name="NewNonsubscribedPasswordDontUse" value="123456" />
+	<parameter name="NewNonsubscribedUserNameDontUse1" value="newuserdontuse1@gmail.com" />
+	<parameter name="NewNonsubscribedPasswordDontUse1" value="123456" />
+	
+
+
+	<parameter name="Validfacebookemail" value="krisarorec1047@gmail.com" />
+	<parameter name="Validfacebookpassword" value="Krishna19@" />
+
+	<parameter name="SearchSong" value="Beautiful You" />
+	<parameter name="reportProfileDescription" value="HI" />
+	<parameter name="#Fun" value="#Fun" />
+  	<parameter name="Description" value="#Fun Description" />
+	<parameter name="DescriptionandURL" value="#Fun Description https://www.google.com/" />
+	<parameter name="coolglass" value="cool glass" />
+
+
+	
+	<parameter name="NonsubscribedUserName1" value="igstesting001@gmail.com" />
+	<parameter name="NonsubscribedPassword1" value="igs@12345" />
+	<parameter name="NonsubscribedUserName2" value="igstesting003@gmail.com" />		<!-- username="zeenonsubhipi@gmail.com" -->
+	<parameter name="NonsubscribedPassword2" value="igs@12345" />		<!-- password="123456" -->
+	
+
+	<parameter name="SubscribedUserName1" value="" />
+	<parameter name="SubscribedPassword1" value="" />
+
+	<parameter name="MyProfileHipiNonsubUsername" value="9059995072" />
+	<parameter name="MyProfileHipiNonsubPassword" value="Kartheek@1994" />
+
+
+	
+	<parameter name="NotificationNonSubUsername1" value="rock.v@gmail.com" />
+	<parameter name="NotificationNonSubPassword1" value="123456" />
+
+	<parameter name="NotificationNonSubUsername2" value="himadri.sengupta@igsindia.net" />
+	<parameter name="NotificationNonSubPassword2" value="123456" />
+	
+
+
+
+
+	<listeners>
+		<listener class-name="com.extent.ExtentReporter" />
+		<!-- <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/> -->
+		<!-- <listener class-name="com.utility.MyTranformer"/> -->
+	</listeners>
+
+	<test name="Android_Hipi_Sanity">
+		<classes>
+			<class name="com.zee5.Android_HipiScripts.AndroidHipiSanity" />
+		</classes>
+	</test>
+
+</suite>

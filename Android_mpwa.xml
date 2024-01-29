@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ANDROIDMPWA" parallel="tests" thread-count="2">  <!-- name="Android" -->
+		
+
+	<!-- <parameter name="userType" value="${UserType}"/> Guest/NonSubscribedUser
+	<parameter name="runMode" value="${runMode}"/> <parameter name="runModule" 
+	value="${runModule}"/> <parameter name="browserType" value="${browserType}"/> --> 
+	<parameter name="browserType" value="MPWA"/>
+	<parameter name="url" value="https://www.hipi.co.in/" /> <!--https://preprod.hipi.co.in/      -->
+	<parameter name="userType" value="NonSubscribedUser" />  <!-- Guest/NonSubscribedUser-->
+	
+	
+	<parameter name="runModule" value="Suite" />
+	<parameter name="runMode" value="Suites" />
+	
+	<parameter name="NonsubscribedUserName" value="nagakartheek.dasareddy@gmail.com" />
+	<parameter name="NonsubscribedPassword" value="123456" />
+	
+	<parameter name="SubscribedUserName" value="" />
+	<parameter name="SubscribedPassword" value="" />
+	
+	<parameter name="searchcontent1" value="Sanchari Hrudaya - Chambal" />	
+	
+	<parameter name="SearchName" value="hipi"/>
+	<parameter name="description" value="#hashtag"/>
+	
+	<parameter name="NonsubscribedUserNameYahoo" value="suhailinnovations@yahoo.com" />
+	<parameter name="NonsubscribedPasswordYahoo" value="123456" />
+	
+	<parameter name="URL" value="https://www.google.com/" />
+	<parameter name="RisingStar" value="Mohit_yadav"/>
+	
+	<parameter name="MetadataSearchKeyword" value="Bura na manoo Holi Hai" />
+	<parameter name="HashtagSearchKeyword" value="#Transition" />
+	<parameter name="ProfileSearchKeyword" value="Mahira Sharma" />
+	<parameter name="SoundSearchKeyword" value="twist kamariya" />
+	<parameter name="keyword" value="Kundali Bhagya" />
+	<parameter name="music" value="Tere Siva" />
+	<parameter name="hashtag" value="#thejawaanisong" />
+	<parameter name="user" value="Prince Narula" />
+	<parameter name="Anahita" value="Anahita Saini" />
+	<parameter name="RamPyaare" value="Qurbaan" />
+	
+	<parameter name="NewNonsubscribedUserName" value="zeehipinewuser@gmail.com" />
+	<parameter name="NewNonsubscribedPassword" value="zee123" />
+	
+	<parameter name="NewNonsubscribedUserNameDontUse" value="newuserdontuse@gmail.com" />
+	<parameter name="NewNonsubscribedPasswordDontUse" value="123456" />
+	<parameter name="NewNonsubscribedUserNameDontUse1" value="newuserdontuse1@gmail.com" />
+	<parameter name="NewNonsubscribedPasswordDontUse1" value="123456" />
+	
+	<parameter name="NonsubscribedUserNameYahoo" value="Suhailinnovations@yahoo.com" />
+	<parameter name="NonsubscribedPasswordYahoo" value="123456" />
+	<parameter name="HipiContest" value="#HipiPassTheMic"/>
+	
+	<parameter name="SunnyLeone" value="Sunny Leone" />
+	
+	
+	<parameter name="KundaliBhagya" value="kundali" />
+	
+	<parameter name="InvalidEmailId" value="abcdlmnxzf@g.com" />
+	
+	
+	<parameter name="Validfacebookemail" value="krisarorec1047@gmail.com" />
+	<parameter name="Validfacebookpassword" value="Krishna19@" />
+	
+	<parameter name="SearchSong" value="Beautiful You" />
+	<parameter name="reportProfileDescription" value="HI" />
+	<parameter name="#Fun" value="#vacscene" />
+  	<parameter name="Description" value="#vacscene Description" />
+	<parameter name="DescriptionandURL" value="#vacscene Description https://www.google.com/" />
+	<parameter name="coolglass" value="cool glass" />
+	
+	<parameter name="NonsubscribedUserName1" value="igstesting001@gmail.com" />
+	<parameter name="NonsubscribedPassword1" value="igs@12345" />
+	<parameter name="NonsubscribedUserName2" value="igstesting003@gmail.com" />		<!-- username="zeenonsubhipi@gmail.com" -->
+	<parameter name="NonsubscribedPassword2" value="igs@12345" />		<!-- password="123456" -->
+	<parameter name="NonsubscribedUserName6" value="igstesting006@gmail.com" />
+	<parameter name="NonsubscribedPassword6" value="123456" />
+	
+	<parameter name="SubscribedUserName1" value="" />
+	<parameter name="SubscribedPassword1" value="" />
+	<parameter name="Searchbars" value="Kundali Bhagya"/>
+	<parameter name="MyProfileHipiNonsubUsername" value="9059995072" />
+	<parameter name="MyProfileHipiNonsubPassword" value="Kartheek@1994" />
+	
+	<parameter name="NotificationNonSubUsername1" value="rock.v@gmail.com" />
+	<parameter name="NotificationNonSubPassword1" value="123456" />
+	
+	<parameter name="NotificationNonSubUsername2" value="himadri.sengupta@igsindia.net" />
+	<parameter name="NotificationNonSubPassword2" value="123456" />
+	<parameter name="SelectYear2020" value="2020" />
+	<parameter name="SelectYear1995" value="1995" />
+	<parameter name="SelectYear2017" value="2017" />
+	<parameter name="Email" value="Kartheek@gmail.com" />
+	<parameter name="FullNmae" value="Kartheek9 Reddy" />
+	<parameter name="PhoneNumber" value="9059995072" />
+	<parameter name="Password" value="123456" />
+	<parameter name="InvalidePassword" value="123678" />
+	<parameter name="PhoneNumberOtp" value="9080431369" />
+	<parameter name="BioText" value="Boooom Boooom" />
+	<parameter name="LessPhoneNumber" value="944173" />
+	<parameter name="NewNumber" value="9441739566" />
+	<parameter name="FirstName" value="Naga" />
+	<parameter name="LastName" value="Kartheek" />
+	<parameter name="WithOutSpaceName" value="Kartheekreddy@9" />
+	<parameter name="InvalideNumber" value="9999999999" />
+	<parameter name="Surname" value="Naga" />
+	<parameter name="MorePhoneNumber" value="90000000002" />
+	<parameter name="newpassword2" value="abcdABCD"/>
+	<parameter name="newpassword3" value="1234567890"/>
+	<parameter name="newpassword4" value="!@#$%^*!@"/>
+	<parameter name="newpassword5" value="123abc!@#"/>
+	<parameter name="newpassword6" value="123abc"/>
+	<parameter name="newpassword7" value="abc!@#"/>
+	<parameter name="newpassword8" value="123!@#"/>
+	<parameter name="BioText" value="Kumar" />
+	<parameter name="ThreeLetters" value="son" />
+	<parameter name="Himanshi" value="Sunny Leone" />
+	<parameter name="Dheeraj" value="Karan dheerajdhoopar" />
+	<parameter name="Kundali" value="Kundali" />
+	<parameter name="SearchAnyFollowing" value="Ram pyaare sirf hamare " />
+	<parameter name="ram" value="Ram pyaare" />
+	<parameter name="Singer" value="Arijit Singh" />		
+	<parameter name="Searchbar" value="kundali bhagya"/>
+	<parameter name="AddToComment" value="Hellooooo"/>
+	<parameter name="username" value="nithin21c414b3"/>
+	<parameter name="usernameinbio" value="BioUsername"/>
+	<parameter name="usernamee" value="MuthuKumaran"/>
+	<parameter name="morethan40" value="onetwothreefourfivesixseveneightninieten  eleventwelvethirteenfourteenfifteensixteenseventeenEigtheenNineteentwenty"/>
+	<parameter name="morethan20" value="onetwothreefourfivesixseveneightninieten  eleventwelve"/>
+	<parameter name="description" value="#hashtag"/>
+	<parameter name="oldpassword" value="123456"/>
+	<parameter name="newpassword" value="12345"/>
+	<parameter name="InvalidEmailId" value="abcdlmnxzf" />
+			
+	<parameter name="NewMailId" value="igst2507@gmail.com," />
+			
+	<parameter name="NewMailPassword" value="muthukumar900" />
+			
+	<parameter name="SongName" value="Kundali" />
+	<parameter name="ContactName" value="Kartheek Reddy" />
+	<parameter name="SearchSoundName" value="Jaan Ban Gaye" />	
+	<parameter name="SearchArtistName" value="Badshah" />
+			
+	<listeners>
+		<listener class-name="com.extent.ExtentReporter" />
+		<!-- <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/> -->
+		<!-- <listener class-name="com.utility.MyTranformer"/> -->
+	</listeners>
+	
+	
+	<test name="AndroidHiPiNeo">
+		<classes>
+			<class name="com.zee5.Android_HipiScripts.Android_MWEB" />
+			
+		</classes>
+	</test> 
+	<!--
+	<test name="AndroidHiPiNeoP1">
+		<classes>
+			<class name="com.zee5.Android_HipiScripts.AndroidHiPiNeoP1" />
+		</classes>
+	</test> -->
+	<!--
+	<test name="AndroidHiPiNeoP2">
+		<classes>
+			<class name="com.zee5.Android_HipiScripts.AndroidHiPiNeoP2" />
+		</classes> 
+	</test>  -->
+	
+ 	</suite>
+	
